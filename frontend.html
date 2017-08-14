@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BattleShip</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <style>
+        .message{
+            text-align: center;
+            width: 290px;
+            margin: 31px auto;
+            background-color: #95a5a6;
+            padding: 14px 18px;
+            border-radius: 5px;
+            color: white;
+        }
+        .result {
+            background: #95a5a6;
+            padding: 10px 18px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 10px auto;
+            color: white;
+            width: 290px;
+        }
+        .image {
+            background-repeat: no-repeat;
+            height: 139px;
+            background-image: url(sea2.jpg);
+            width: 300px;
+            background-size: 570px 300px;
+        }
+        .blast {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <h1>BattleShip</h1>
+    <p>A Battle game for warriors!</p>
+    <p>
+        <div name="welcome" id="welcome"></div>
+    </p>
+</div>
+<div id="message" class="message" style="display: none"></div>
+<div id="showResult" class="result" style="display: none"></div>
+<div id="replayMessage" class="replay" style="display: none">
+<div class="container">
+    <div class="row">
+    <div class="col-md-2 col-md-offset-5">
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" name="replay" id="replay">Replay</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="container" id="container" >
+    <div class="row" name="battleship" id="battleship" >
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" name="form" id="form">
+                    <label>Enter your Name:</label>
+                    <input type="text" name="yourName" id="yourName" class="form-control">
+                    <div name="nameErrorMessage" id="nameErrorMessage" style="color: red;"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Opponent Name:</label>
+                    <input type="text" name="opponentName" id="opponentName" class="form-control">
+                    <div name="opponentNameErrorMessage" id="opponentNameErrorMessage" style="color: red"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Number of rows:</label>
+                    <input type="text" name="rows" id="rows" class="form-control">
+                    <div name="rowsErrorMessage" id="rowsErrorMessage" style="color: red"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Number of columns:</label>
+                    <input type="text" name="columns" id="columns" class="form-control">
+                    <div name="columnsErrorMessage" id="columnsErrorMessage" style="color: red" ></divname>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" name="submit" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+   </div>
+        </div>
+    </div>
+</div>
+<script src="./js/lodash.min.js"></script>
+<script src="battleship.js"></script>
+</body>
+</html>
